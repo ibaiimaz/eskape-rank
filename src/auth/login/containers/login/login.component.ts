@@ -4,17 +4,9 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 
 @Component({
-  selector: 'login',
-  styleUrls: ['login.component.scss'],
-  template: `
-    <div class="auth-form">
-      <h1>Log in into My Escape Rank</h1>
-      <button type="button" (click)="loginWithGoogle()">
-        <i class="fab fa-google"></i>
-        Login with google
-      </button>
-    </div>
-  `
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['login.component.scss']
 })
 export class LoginComponent {
 
@@ -26,7 +18,7 @@ export class LoginComponent {
   async loginWithGoogle() {
     try {
       await this.authService.loginWithGoogle();
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
     } catch (err) {
       console.log('Error: ', err.message);
     }

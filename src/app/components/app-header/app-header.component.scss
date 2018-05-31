@@ -1,38 +1,5 @@
-.app-header {
-  background: #fff;
-  border-bottom: 1px solid #c1cedb;
-  padding: 0 0;
-  text-align: center;
-  h1 {
-    font-family: asectica;
-    font-size: 4em;
-    color: #333333;
-    margin: 0;
-    font-weight: normal;
-  }
-  &__user-info {
-    position: absolute;
-    top: 16px;
-    right: 0;
-    cursor: pointer;
-  }
-  span {
-    display: block;
-    opacity: 0.5;
-    font-size: 1.2em;
-    padding: 0px 6px;
-    color: #DC6B41;
-    border-radius: 4px;
-    border: 1px solid;
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-}
-
-.wrapper {
-  max-width: 800px;
-  width: 96%;
-  margin: 0 auto;
-  position: relative;
+.fill-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
 }

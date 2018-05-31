@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Store } from '../store';
 
@@ -15,24 +16,23 @@ import { AppComponent } from './containers/app/app.component';
 
 // components
 import { AppHeaderComponent } from './components/app-header/app-header.component';
-import { AppNavComponent } from './components/app-nav/app-nav.component';
 
 // routes
 export const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'auth' }
+  { path: '', pathMatch: 'full', redirectTo: 'ranking' }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppHeaderComponent,
-    AppNavComponent
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     AuthModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [
     Store,

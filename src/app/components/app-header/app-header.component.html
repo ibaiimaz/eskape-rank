@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <span>MY ESCAPE RANK</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-space"></span>
+  <button
+    *ngIf="user?.authenticated"
+    mat-icon-button
+    [matMenuTriggerFor]="appMenu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+  <ng-template matMenuContent>
+    <button mat-menu-item routerLink="ranking" routerLinkActive="active">Ranking</button>
+    <button mat-menu-item routerLink="games" routerLinkActive="active">Games</button>
+    <button
+      mat-menu-item
+      (click)="logoutUser()"
+    >Log off {{user?.email}}</button>
+  </ng-template>
+</mat-menu>

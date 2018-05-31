@@ -8,7 +8,6 @@ import { SharedModule } from './shared/shared.module';
 // third-party modules
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { FirebaseOptions } from '@firebase/app-types';
 
 export const ROUTES: Routes = [
   {
@@ -20,7 +19,7 @@ export const ROUTES: Routes = [
   }
 ];
 
-export const firebaseConfig: FirebaseOptions = {
+export const firebaseConfig = {
   apiKey: 'AIzaSyATBkFERDADbmkTe1OGQcutjIVFvNHubjg',
   authDomain: 'myescaperank.firebaseapp.com',
   databaseURL: 'https://myescaperank.firebaseio.com',
